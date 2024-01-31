@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+// INHERITANCE
 public class DisplayStats : DisplayBase
 {
     [SerializeField] private TMP_Text nameLabel;
@@ -13,6 +14,9 @@ public class DisplayStats : DisplayBase
     [SerializeField] private TMP_Text damageLabel;
 
 
+    // POLYMORPHISM
+    // Here we override the LoadInfo method from the base class
+    // to load the stats in the text components.
     protected override void LoadInfo(CharacterBase character)
     {
         nameLabel.text = $"Name: {character?.Name}";
