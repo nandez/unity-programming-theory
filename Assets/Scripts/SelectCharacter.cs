@@ -7,7 +7,8 @@ public class SelectCharacter : MonoBehaviour
 {
     [SerializeField] private List<CharacterBase> availableCharacters;
 
-    // Example of encapsulation; we're using a property to control the access to the selected character
+    // ENCAPSULATION
+    // We're using a property to control the access to the selected character
     // and make sure it is always a valid character,also we're using an event to notify the subscribers
     // when the selected character changes.
     private CharacterBase _selectedCharacter;

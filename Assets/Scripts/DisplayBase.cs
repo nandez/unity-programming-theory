@@ -9,7 +9,10 @@ public abstract class DisplayBase : MonoBehaviour
         SubscribeToCharacterSelection();
     }
 
-
+    // ABSTRACTION
+    // This method is abstract and must be implemented by the derived classes.
+    // It will be called when a character is selected, so derived classes can load the info
+    // of the selected character as they fit.
     protected abstract void LoadInfo(CharacterBase character);
 
     private void SubscribeToCharacterSelection()

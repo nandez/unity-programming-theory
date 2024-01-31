@@ -1,12 +1,13 @@
 using UnityEngine;
 
-// Example of inheritance; here we inherit from the CharacterBase class
+// INHERITANCE
 public class CharacterWarrior : CharacterBase
 {
     [SerializeField] private int _armor;
     public int Armor => _armor;
 
-    // Example of polymorphism; here we override the Greet method from the base class
+    // POLYMORPHISM
+    // Here we override the Greet method from the base class
     // to provide a unique greeting for the warrior character.
     public override string Greet()
     {

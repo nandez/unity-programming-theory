@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Example of inheritance; here we inherit from the CharacterBase class
+// INHERITANCE
 public class CharacterRanger : CharacterBase 
 {
     [SerializeField] private float _criticalRate;
@@ -8,7 +8,8 @@ public class CharacterRanger : CharacterBase
     public float CriticalRate => _criticalRate;
 
 
-    // Example of polymorphism; here we override the Greet method from the base class
+    // POLYMORPHISM
+    // Here we override the Greet method from the base class
     // to provide a unique greeting for the ranger character.
     public override string Greet()
     {
