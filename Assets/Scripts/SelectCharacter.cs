@@ -21,6 +21,7 @@ public class SelectCharacter : MonoBehaviour
             if (availableCharacters.Contains(value))
             {
                 _selectedCharacter = value;
+                SetCharacterScale();
                 OnSelectedCharacter?.Invoke(_selectedCharacter);
             }
         }
@@ -57,6 +58,16 @@ public class SelectCharacter : MonoBehaviour
                     SelectedCharacter = character;
                 }
             }
+        }
+    }
+
+    private void SetCharacterScale()
+    {
+        foreach (var character in availableCharacters)
+        {
+            character.transform.localScale = _selectedCharacter == character 
+                ? Vector3.one * 1.25f 
+                : Vector3.one;
         }
     }
 }
