@@ -6,6 +6,7 @@ using UnityEngine;
 // INHERITANCE
 public class DisplayStats : DisplayBase
 {
+    [SerializeField] private TMP_Text classLabel;
     [SerializeField] private TMP_Text nameLabel;
     [SerializeField] private TMP_Text strengthLabel;
     [SerializeField] private TMP_Text dexterityLabel;
@@ -25,5 +26,12 @@ public class DisplayStats : DisplayBase
         intelligenceLabel.text = $"Intelligence: {character?.Intelligence}";
         healthLabel.text = $"Health: {character?.Health}";
         damageLabel.text = $"Damage: {character?.Damage}";
+
+        if (character is CharacterWarrior)
+            classLabel.text = "Warrior";
+        else if (character is CharacterRanger)
+            classLabel.text = "Ranger";
+        else if (character is CharacterWizard)
+            classLabel.text = "Wizard";
     }
 }
